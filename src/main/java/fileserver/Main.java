@@ -1,13 +1,12 @@
-package ca.concordia;
+package fileserver;
 
-import ca.concordia.server.FileServer;
+import fileserver.server.FileServer;
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.printf("Hello and welcome!");
+  public static void main(String[] args) {
+    System.out.println("Hello and welcome!");
 
-        FileServer server = new FileServer(12345, "filesystem.dat", 10 * 128);
-        // Start the file server
-        server.start();
-    }
+    FileServer server = new FileServer(12345, "fileserver/prog_assign.fs", 10 * 128);
+    server.start();
+  }
 }
